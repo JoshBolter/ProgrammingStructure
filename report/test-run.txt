@@ -1,0 +1,152 @@
+JoshLang final verification
+Python 3.12.14
+Run from the JoshLang project root.
+
+Command: python -m unittest discover -s test -p test_*.py -v
+
+test_all_cases_in_source_file_mode (lab1.test_scanner.ScannerTests.test_all_cases_in_source_file_mode) ... ok
+test_all_scanner_cases (lab1.test_scanner.ScannerTests.test_all_scanner_cases) ... ok
+test_every_token_type_is_covered (lab1.test_scanner.ScannerTests.test_every_token_type_is_covered) ... ok
+test_interactive_recovery (lab1.test_scanner.ScannerTests.test_interactive_recovery) ... ok
+test_interactive_unsupported_whitespace (lab1.test_scanner.ScannerTests.test_interactive_unsupported_whitespace) ... ok
+test_interactive_whitespace_and_eof (lab1.test_scanner.ScannerTests.test_interactive_whitespace_and_eof) ... ok
+test_binary_keeps_operands_and_operator (lab2.test_ast.AstTests.test_binary_keeps_operands_and_operator) ... ok
+test_examples_cover_every_node_literal_and_operator (lab2.test_ast.AstTests.test_examples_cover_every_node_literal_and_operator) ... ok
+test_grouping_keeps_its_expression (lab2.test_ast.AstTests.test_grouping_keeps_its_expression) ... ok
+test_hard_coded_examples (lab2.test_ast.AstTests.test_hard_coded_examples) ... ok
+test_literal_values_are_preserved (lab2.test_ast.AstTests.test_literal_values_are_preserved) ... ok
+test_string_boolean_and_nil_are_distinct (lab2.test_ast.AstTests.test_string_boolean_and_nil_are_distinct) ... ok
+test_unary_keeps_operator_and_operand (lab2.test_ast.AstTests.test_unary_keeps_operator_and_operand) ... ok
+test_unsupported_node_is_rejected (lab2.test_ast.AstTests.test_unsupported_node_is_rejected) ... ok
+test_addition_associativity (lab3.test_parser.ParserTests.test_addition_associativity) ... ok
+test_assignment_token (lab3.test_parser.ParserTests.test_assignment_token) ... ok
+test_binary_ast_fields (lab3.test_parser.ParserTests.test_binary_ast_fields) ... ok
+test_boolean_nil_and_numeric_value_types (lab3.test_parser.ParserTests.test_boolean_nil_and_numeric_value_types) ... ok
+test_comment (lab3.test_parser.ParserTests.test_comment) ... ok
+test_comparison_associativity (lab3.test_parser.ParserTests.test_comparison_associativity) ... ok
+test_decimal (lab3.test_parser.ParserTests.test_decimal) ... ok
+test_depth_limit (lab3.test_parser.ParserTests.test_depth_limit) ... ok
+test_division_associativity (lab3.test_parser.ParserTests.test_division_associativity) ... ok
+test_division_without_evaluation (lab3.test_parser.ParserTests.test_division_without_evaluation) ... ok
+test_empty_file (lab3.test_parser.ParserTests.test_empty_file) ... ok
+test_empty_group (lab3.test_parser.ParserTests.test_empty_group) ... ok
+test_empty_string (lab3.test_parser.ParserTests.test_empty_string) ... ok
+test_equality_associativity (lab3.test_parser.ParserTests.test_equality_associativity) ... ok
+test_equality_precedence (lab3.test_parser.ParserTests.test_equality_precedence) ... ok
+test_extra_closing_parenthesis (lab3.test_parser.ParserTests.test_extra_closing_parenthesis) ... ok
+test_false_literal (lab3.test_parser.ParserTests.test_false_literal) ... ok
+test_full_expression (lab3.test_parser.ParserTests.test_full_expression) ... ok
+test_grouping (lab3.test_parser.ParserTests.test_grouping) ... ok
+test_identifier_expression (lab3.test_parser.ParserTests.test_identifier_expression) ... ok
+test_inequality (lab3.test_parser.ParserTests.test_inequality) ... ok
+test_integer (lab3.test_parser.ParserTests.test_integer) ... ok
+test_interactive_blank_lines (lab3.test_parser.ParserTests.test_interactive_blank_lines) ... ok
+test_interactive_recovery (lab3.test_parser.ParserTests.test_interactive_recovery) ... ok
+test_interactive_trailing_recovery (lab3.test_parser.ParserTests.test_interactive_trailing_recovery) ... ok
+test_invalid_right_operand (lab3.test_parser.ParserTests.test_invalid_right_operand) ... ok
+test_lexical_character (lab3.test_parser.ParserTests.test_lexical_character) ... ok
+test_lexical_number_range (lab3.test_parser.ParserTests.test_lexical_number_range) ... ok
+test_lexical_string (lab3.test_parser.ParserTests.test_lexical_string) ... ok
+test_literal_backslash (lab3.test_parser.ParserTests.test_literal_backslash) ... ok
+test_logical_and (lab3.test_parser.ParserTests.test_logical_and) ... ok
+test_logical_or (lab3.test_parser.ParserTests.test_logical_or) ... ok
+test_missing_left_operand (lab3.test_parser.ParserTests.test_missing_left_operand) ... ok
+test_missing_operand_in_group (lab3.test_parser.ParserTests.test_missing_operand_in_group) ... ok
+test_missing_right_operand (lab3.test_parser.ParserTests.test_missing_right_operand) ... ok
+test_missing_right_parenthesis (lab3.test_parser.ParserTests.test_missing_right_parenthesis) ... ok
+test_missing_unary_minus_operand (lab3.test_parser.ParserTests.test_missing_unary_minus_operand) ... ok
+test_missing_unary_not_operand (lab3.test_parser.ParserTests.test_missing_unary_not_operand) ... ok
+test_multiline_error_location (lab3.test_parser.ParserTests.test_multiline_error_location) ... ok
+test_multiline_expression (lab3.test_parser.ParserTests.test_multiline_expression) ... ok
+test_multiline_string (lab3.test_parser.ParserTests.test_multiline_string) ... ok
+test_multiline_unclosed_group (lab3.test_parser.ParserTests.test_multiline_unclosed_group) ... ok
+test_multiplication_associativity (lab3.test_parser.ParserTests.test_multiplication_associativity) ... ok
+test_negative_number_is_unary (lab3.test_parser.ParserTests.test_negative_number_is_unary) ... ok
+test_negative_right_operand (lab3.test_parser.ParserTests.test_negative_right_operand) ... ok
+test_nested_grouping (lab3.test_parser.ParserTests.test_nested_grouping) ... ok
+test_nil_literal (lab3.test_parser.ParserTests.test_nil_literal) ... ok
+test_precedence (lab3.test_parser.ParserTests.test_precedence) ... ok
+test_remainder (lab3.test_parser.ParserTests.test_remainder) ... ok
+test_remainder_associativity (lab3.test_parser.ParserTests.test_remainder_associativity) ... ok
+test_remainder_precedence (lab3.test_parser.ParserTests.test_remainder_precedence) ... ok
+test_statement_token (lab3.test_parser.ParserTests.test_statement_token) ... ok
+test_string (lab3.test_parser.ParserTests.test_string) ... ok
+test_subtraction_associativity (lab3.test_parser.ParserTests.test_subtraction_associativity) ... ok
+test_syntax_without_evaluation (lab3.test_parser.ParserTests.test_syntax_without_evaluation) ... ok
+test_trailing_dot (lab3.test_parser.ParserTests.test_trailing_dot) ... ok
+test_trailing_expression (lab3.test_parser.ParserTests.test_trailing_expression) ... ok
+test_trailing_semicolon (lab3.test_parser.ParserTests.test_trailing_semicolon) ... ok
+test_true_literal (lab3.test_parser.ParserTests.test_true_literal) ... ok
+test_unary_associativity (lab3.test_parser.ParserTests.test_unary_associativity) ... ok
+test_unary_grouping (lab3.test_parser.ParserTests.test_unary_grouping) ... ok
+test_unary_minus (lab3.test_parser.ParserTests.test_unary_minus) ... ok
+test_unary_not (lab3.test_parser.ParserTests.test_unary_not) ... ok
+test_unary_precedence (lab3.test_parser.ParserTests.test_unary_precedence) ... ok
+test_unmatched_closing_parenthesis (lab3.test_parser.ParserTests.test_unmatched_closing_parenthesis) ... ok
+test_unsupported_unary_plus (lab3.test_parser.ParserTests.test_unsupported_unary_plus) ... ok
+test_zero (lab3.test_parser.ParserTests.test_zero) ... ok
+
+----------------------------------------------------------------------
+Ran 81 tests in 11.151s
+
+OK
+
+Exit code: 0
+
+Command: python -m test.lab1.write_report
+Wrote report/lab1-test-results.md: 28/28 command-line runs passed.
+
+
+Exit code: 0
+
+Command: python -m test.lab2.examples --report
+textbook_nested: PASS
+(* (- 123) (group 45.67))
+string_addition: PASS
+(+ "hello" " world")
+subtraction: PASS
+(- 10 3)
+division: PASS
+(/ 20 4)
+remainder: PASS
+(% 17 5)
+unary_not: PASS
+(! true)
+nil_equality: PASS
+(== nil nil)
+boolean_inequality: PASS
+(!= true false)
+less_than: PASS
+(< 1 2)
+less_equal: PASS
+(<= 1 1)
+greater_than: PASS
+(> 3 2)
+greater_equal: PASS
+(>= 3 3)
+left_associative_subtraction: PASS
+(- (- 10 3) 2)
+nested_grouping: PASS
+(group (group (+ 2 3)))
+double_not: PASS
+(! (! false))
+empty_string: PASS
+""
+string_true: PASS
+"true"
+multiline_string: PASS
+"line one\nline two"
+zero: PASS
+0
+mixed_precedence: PASS
+(== (+ 1 (* 2 3)) 7)
+Report written: lab2-test-results.md
+
+
+Exit code: 0
+
+Command: python -m test.lab3.run_examples
+Lab 3: 64/64 example cases passed.
+
+
+Exit code: 0
