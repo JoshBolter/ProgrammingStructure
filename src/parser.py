@@ -1,6 +1,7 @@
 from .errors import Diagnostic
 from .expr import Binary, Grouping, Literal, Unary
 from .token_type import TokenType
+from .stmt import ExpressionStatement, PrintStatement
 
 
 class _ParseError(Exception):
@@ -33,6 +34,51 @@ class Parser:
                 "Syntax error",
             ))
             return None
+
+    def parse_statements(self):
+        statements = []
+        while not self._check(TokenType.EOF):
+            try:
+                statements.append(self._statement())
+            except _ParseError:
+                self._synchronize()
+            except RecursionError:
+                token = self._peek()
+                self.errors.append(Diagnostic(
+                    token.line, token.column,
+                    "Expression is too deeply nested.", "Syntax error",
+                ))
+                self._synchronize()
+        return statements
+
+    def _statement(self):
+        if self._match(TokenType.PRINT):
+            expression = self._expression()
+            self._consume(TokenType.SEMICOLON, "Expected ';' after print statement.")
+            return PrintStatement(expression)
+        expression = self._expression()
+        self._consume(TokenType.SEMICOLON, "Expected ';' after expression.")
+        return ExpressionStatement(expression)
+
+    def _consume(self, token_type, message):
+        if self._match(token_type):
+            return self._previous()
+        self._fail(self._peek(), message)
+
+    def _synchronize(self):
+        if self._check(TokenType.SEMICOLON):
+            self.current += 1
+            return
+        while not self._check(TokenType.EOF):
+            if self.current > 0 and self._previous().type == TokenType.SEMICOLON:
+                return
+            if self._peek().type in {
+                TokenType.PRINT, TokenType.NUMBER, TokenType.STRING,
+                TokenType.TRUE, TokenType.FALSE, TokenType.NIL,
+                TokenType.LEFT_PAREN, TokenType.BANG, TokenType.MINUS,
+            }:
+                return
+            self.current += 1
 
     def _expression(self):
         return self._equality()

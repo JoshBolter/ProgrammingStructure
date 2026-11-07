@@ -1,0 +1,2 @@
+print "discarded"
+print "preserved";
